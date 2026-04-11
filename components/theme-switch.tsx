@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import clsx from "clsx";
 
@@ -12,6 +12,14 @@ export interface ThemeSwitchProps {
 
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
   const { setTheme, resolvedTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // 🔥 THIS LINE FIXES EVERYTHING
 
   const isLight = resolvedTheme === "light";
 
