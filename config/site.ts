@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
+  name: "Khatuna Jannat Sarnali",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
@@ -9,19 +9,19 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Docs",
+      label: "Skills",
       href: "/docs",
     },
     {
-      label: "Pricing",
+      label: "Projects",
       href: "/pricing",
     },
     {
-      label: "Blog",
+      label: "Experience",
       href: "/blog",
     },
     {
-      label: "About",
+      label: "Contact",
       href: "/about",
     },
   ],
@@ -60,7 +60,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
+    github: "https://github.com/sarnali3515",
     twitter: "https://twitter.com/hero_ui",
     docs: "https://heroui.com",
     discord: "https://discord.gg/9b6yyZKmH4",

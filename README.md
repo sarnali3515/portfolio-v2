@@ -1,42 +1,30 @@
-# Next.js & HeroUI Template
+#  My Portfolio Website
 
-This is a template for creating applications using Next.js 15 (app directory) and HeroUI (v3).
+This is my personal portfolio built with Next.js to showcase my skills, projects, and experience as a web developer.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+---
 
-## Technologies Used
+## Tech Stack
 
-- [Next.js 15](https://nextjs.org/docs/getting-started)
-- [HeroUI v3](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- HeroUI
+- Framer Motion
 
-## How to Use
+---
 
-### Use the template with create-next-app
+## Features
 
-To create a new project based on this template using `create-next-app`, run the following command:
+- Responsive design (mobile + desktop)
+- Dark / Light mode support
 
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
+---
 
-### Install dependencies
+## Getting Started
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
+Clone the repository:
 
 ```bash
-npm run dev
-```
-
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+git clone https://github.com/sarnali3515/portfolio-v2
