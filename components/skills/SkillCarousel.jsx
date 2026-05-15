@@ -86,7 +86,8 @@ export default function ReelCarousel({
 
         rotationAngle.current += deltaX * -0.8;
         applyRotation();
-        currentSpeed.current = boostSpeed;
+        currentSpeed.current =
+            deltaX > 0 ? boostSpeed : -boostSpeed;
     };
 
     const handleMouseUp = () => {
@@ -96,7 +97,8 @@ export default function ReelCarousel({
         const diff = Math.abs(lastMouseX.current - mouseDownX.current);
         if (diff < 5) {
             dragStarted.current = false;
-            currentSpeed.current = 1;
+            currentSpeed.current =
+                rotationAngle.current >= 0 ? 1 : -1;
             decelerationStartTime.current = 0;
             return;
         }
@@ -174,7 +176,7 @@ export default function ReelCarousel({
 
     return (
         <div
-            className="relative flex justify-center items-center min-h-[500px]"
+            className="relative flex justify-center items-center min-h-[500px] select-none"
             style={{ perspective }}
         >
             <div

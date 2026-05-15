@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import SectionTitle from "../SectionTitle";
 
 const Education = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -62,7 +63,10 @@ const Education = () => {
 
     return (
         <div id="education" className="w-full px-4 sm:px-6 lg:px-12 2xl:px-24 py-10 lg:py-32 xl:py-40 bg-gradient-to-b from-gray-50 to-white dark:from-black dark:to-gray-900 relative transition-colors duration-300">
-            <div className="relative z-10 max-w-6xl lg:max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] w-full mx-auto">
+            {/* Title */}
+            <SectionTitle title="Education" description="Education section demo" />
+
+            <div className="relative z-10 max-w-6xl lg:max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] w-full mx-auto mt-10 lg:mt-28">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 2xl:gap-12 mt-10">
                     {educationList.map((edu, index) => (
                         <div

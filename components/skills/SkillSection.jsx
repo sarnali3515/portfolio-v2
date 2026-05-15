@@ -1,5 +1,5 @@
 'use client';
-// import SectionTittle from "../../../Components/SectionTitle/SectionTittle";
+import SectionTitle from "../SectionTitle";
 import SkillCarousel from "./SkillCarousel";
 
 const Skills = () => {
@@ -19,7 +19,7 @@ const Skills = () => {
 
     return (
         <div id="skills" className='py-20 dark:bg-gray-900'>
-            {/* <SectionTittle title="My Skills" /> */}
+            <SectionTitle title="Skills" description="Skill section demo" />
 
             {/* 3D Carousel */}
             <div className="">
