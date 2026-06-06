@@ -3,6 +3,7 @@ import ProjectSection from "../components/projects/ProjectSection"
 import Education from "../components/Education/Education"
 import BannerSection from "../components/Banner/BannerSection"
 import ExperienceSection from "../components/Experience/ExperienceSection"
+import ContactSection from "../components/Contact/ContactSection"
 import FollowPointer from "../components/FollowPointer"
 
 export default function Home() {
@@ -13,7 +14,9 @@ export default function Home() {
       <ProjectSection />
       <ExperienceSection />
       <Education />
+      <ContactSection />
       <FollowPointer />
+
 
     </section>
   );
