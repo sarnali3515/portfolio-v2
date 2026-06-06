@@ -18,7 +18,7 @@ const Skills = () => {
     ];
 
     return (
-        <div id="skills" className='py-20 dark:bg-gray-900'>
+        <div id="skills" className='py-20 bg-gradient-to-b from-white to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-900'>
             <SectionTitle title="Skills" description="Skill section demo" />
 
             {/* 3D Carousel */}
@@ -29,7 +29,7 @@ const Skills = () => {
                     desktopCardCount={10}
                     baseSpeedMobile={40}
                     baseSpeedDesktop={35}
-                    boostSpeed={35}
+                    boostSpeed={20}
                     decelerationDuration={6000}
                     perspective={1400}
                     rotationX={-20}

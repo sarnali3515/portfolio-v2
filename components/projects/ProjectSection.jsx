@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { FaEye, FaGithub } from "react-icons/fa";
+import SectionTitle from "../SectionTitle";
 
 // Projects Data
 const projectsData = [
@@ -257,14 +258,8 @@ export default function ProjectsCarousel() {
     return (
         <section className="w-full min-h-screen bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:via-gray-900 dark:to-black flex flex-col items-center justify-center overflow-x-hidden relative py-8 md:py-12 transition-colors duration-300">
             {/* Header Section */}
-            <div className="text-center mb-2 px-4 mt-4 md:mt-8 z-10">
-                <h2 className="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold tracking-widest text-fuchsia-600 dark:text-fuchsia-500 mb-3 md:mb-4 lg:mb-6">
-                    My Projects
-                </h2>
-                <p className="text-sm md:text-base lg:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-6 md:mb-8 px-2">
-                    Explore my latest work and creative projects
-                </p>
-            </div>
+
+            <SectionTitle title="My Projects" description="Explore my latest work and creative projects" />
 
             {/* 3D Carousel Section */}
             <div className="w-full h-[600px] md:h-[650px] lg:h-[750px] overflow-hidden flex items-center justify-center select-none">

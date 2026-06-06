@@ -92,7 +92,7 @@ export default function HeroSection() {
                     </p>
 
                     <button className="group mt-10 inline-flex items-center gap-3 bg-fuchsia-600 hover:bg-fuchsia-500 transition-all duration-300 px-7 py-4 rounded-full text-white font-semibold shadow-[0_0_30px_rgba(217,70,239,0.35)]">
-                        Watch Now
+                        Download Resume
 
                         <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition">
                             →
