@@ -7,6 +7,7 @@ import {
     FaEnvelope,
     FaArrowRight,
     FaFileAlt,
+    FaFacebookF,
 } from "react-icons/fa";
 
 export default function ContactSection() {
@@ -36,10 +37,10 @@ export default function ContactSection() {
             icon: FaLinkedin,
         },
         {
-            title: "Resume",
-            value: "Download CV",
-            href: "/sarna-resume.pdf",
-            icon: FaFileAlt,
+            title: "Facebook",
+            value: "facebook.com/khatunajannatsarnali",
+            href: "https://facebook.com/khatunajannatsarnali",
+            icon: FaFacebookF,
         },
     ];
 
@@ -74,11 +75,11 @@ export default function ContactSection() {
                                 Ready to start a project?
                             </h3>
 
-                            <p className="mt-4 max-w-lg text-gray-500">
+                            {/* <p className="mt-4 max-w-lg text-gray-500">
                                 Whether you need a modern web application, portfolio,
                                 dashboard or full-stack solution, I'm always open to
                                 discussing new opportunities.
-                            </p>
+                            </p> */}
                         </div>
 
                         <div>
@@ -148,7 +149,7 @@ export default function ContactSection() {
                                 />
                             </div>
 
-                            <div>
+                            {/* <div>
                                 <label className="mb-2 block text-sm font-medium text-gray-800 dark:text-gray-200">
                                     Subject
                                 </label>
@@ -158,7 +159,7 @@ export default function ContactSection() {
                                     placeholder="Project Discussion"
                                     className="w-full rounded-xl border border-gray-200 bg-transparent px-4 py-4 outline-none transition-all duration-300 focus:border-fuchsia-500 dark:border-gray-800"
                                 />
-                            </div>
+                            </div> */}
 
                             <div>
                                 <label className="mb-2 block text-sm font-medium text-gray-800 dark:text-gray-200">

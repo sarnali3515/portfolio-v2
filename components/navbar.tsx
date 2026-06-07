@@ -1,6 +1,7 @@
 "use client";
 
 import NextLink from "next/link";
+import Image from "next/image";
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -8,6 +9,7 @@ import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, Logo } from "@/components/icons";
+
 
 export const Navbar = () => {
   const [hidden, setHidden] = useState(false);
@@ -61,10 +63,17 @@ export const Navbar = () => {
         >
           {/* Logo */}
           <NextLink className="flex items-center gap-2" href="/">
-            <Logo />
-            <p className="font-bold text-fuchsia-700 dark:text-fuchsia-500">
+            <Image
+              src="/logo-full.png"
+              alt="KJSarnali Logo"
+              width={120}
+              height={100}
+              priority
+              className="object-contain"
+            />
+            {/* <p className="font-bold text-fuchsia-700 dark:text-fuchsia-500">
               KJSarnali
-            </p>
+            </p> */}
           </NextLink>
 
           {/* Desktop Menu */}
