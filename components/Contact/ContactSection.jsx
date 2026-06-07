@@ -45,7 +45,7 @@ export default function ContactSection() {
     ];
 
     return (
-        <section className="relative overflow-hidden py-32">
+        <section id="contact" className="relative overflow-hidden py-32">
             {/* glow */}
 
             <div className="absolute left-1/2 top-20 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-fuchsia-500/10 blur-[180px]" />

@@ -34,7 +34,7 @@ export default function Footer() {
             {/* soft glow */}
             <div className="pointer-events-none absolute left-1/2 top-0 h-[240px] w-[240px] -translate-x-1/2 rounded-full bg-fuchsia-500/10 blur-[140px]" />
 
-            <div className="mx-auto max-w-6xl px-4 py-14 md:px-6">
+            <div className="mx-auto max-w-6xl 2xl:max-w-7xl px-4 py-14 md:px-6">
 
                 {/* TOP SECTION */}
                 <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">

@@ -10,19 +10,19 @@ export const siteConfig = {
     },
     {
       label: "Skills",
-      href: "/docs",
+      href: "#skills",
     },
     {
       label: "Projects",
-      href: "/pricing",
+      href: "#projects",
     },
     {
       label: "Experience",
-      href: "/blog",
+      href: "#experience",
     },
     {
       label: "Contact",
-      href: "/about",
+      href: "#contact",
     },
   ],
   navMenuItems: [

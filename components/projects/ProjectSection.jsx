@@ -256,7 +256,7 @@ export default function ProjectsCarousel() {
     };
 
     return (
-        <section className="w-full min-h-screen bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:via-gray-900 dark:to-black flex flex-col items-center justify-center overflow-x-hidden relative py-8 md:py-12 transition-colors duration-300">
+        <section id="projects" className="w-full min-h-screen bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:via-gray-900 dark:to-black flex flex-col items-center justify-center overflow-x-hidden relative py-8 md:py-12 transition-colors duration-300">
             {/* Header Section */}
 
             <SectionTitle title="My Projects" description="Explore my latest work and creative projects" />

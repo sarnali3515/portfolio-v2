@@ -77,15 +77,21 @@ export const Navbar = () => {
           </NextLink>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex gap-6">
+          <ul className="hidden md:flex gap-8">
             {siteConfig.navItems.map((item) => (
               <li key={item.href}>
-                <NextLink
-                  className="text-sm font-medium text-foreground/70 dark:text-white hover:text-fuchsia-500"
+                <a
                   href={item.href}
+                  className="group relative block h-6 font-semibold overflow-hidden"
                 >
-                  {item.label}
-                </NextLink>
+                  <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+                    {item.label}
+                  </span>
+
+                  <span className="absolute left-0 top-full block text-fuchsia-500 transition-transform duration-300 group-hover:-translate-y-full">
+                    {item.label}
+                  </span>
+                </a>
               </li>
             ))}
           </ul>

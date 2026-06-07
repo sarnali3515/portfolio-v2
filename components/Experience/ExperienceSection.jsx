@@ -37,7 +37,7 @@ const experienceData = [
 
 export default function ExperienceSection() {
     return (
-        <section className="relative overflow-hidden bg-white py-20 text-zinc-900 dark:bg-black dark:text-white md:py-28">
+        <section id="experience" className="relative overflow-hidden bg-white py-20 text-zinc-900 dark:bg-black dark:text-white md:py-28">
             {/* Glow */}
             <div className="absolute inset-0">
                 <div className="absolute left-1/2 top-0 h-[250px] w-[250px] -translate-x-1/2 rounded-full bg-fuchsia-200/30 blur-[100px] dark:bg-fuchsia-500/10 md:h-[400px] md:w-[400px]" />
