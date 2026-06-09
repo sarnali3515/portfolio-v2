@@ -9,6 +9,7 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import { Toaster } from "react-hot-toast";
 import AOSInitializer from "@/components/AOSInitializer";
 import "aos/dist/aos.css";
 
@@ -56,6 +57,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
+          <Toaster position="top-right" />
         </Providers>
       </body>
     </html>

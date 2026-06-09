@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
     FaGithub,
     FaLinkedin,
@@ -9,8 +10,69 @@ import {
     FaFileAlt,
     FaFacebookF,
 } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 export default function ContactSection() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        setLoading(true);
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) {
+                throw new Error("Failed to send");
+            }
+
+            toast.success("Message sent Successfully!", {
+                style: {
+                    background: "#000",
+                    color: "#fff",
+                    border: "1px solid #e879f9",
+                },
+            });
+
+            setFormData({
+                name: "",
+                email: "",
+                message: "",
+            });
+        } catch (error) {
+            console.error(error);
+            toast.error("Failed to send message!", {
+                style: {
+                    background: "#000",
+                    color: "#fff",
+                    border: "1px solid #e879f9",
+                },
+            });
+        } finally {
+            setLoading(false);
+        }
+    };
+
     const contacts = [
         {
             title: "Email",
@@ -60,7 +122,7 @@ export default function ContactSection() {
                     </p>
 
                     <h2 data-aos="fade-up" data-aos-delay="300"
-                        className="mx-auto max-w-4xl text-5xl font-black leading-tight text-gray-900 md:text-7xl dark:text-white">
+                        className="mx-auto max-w-4xl text-3xl lg:text-5xl font-black leading-tight text-gray-900 md:text-7xl dark:text-white">
                         Let's Build Something
                         <span className="block text-fuchsia-500">
                             Amazing Together
@@ -73,7 +135,7 @@ export default function ContactSection() {
 
                     <div data-aos="fade-right" data-aos-delay="200">
                         <div className="mb-10">
-                            <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+                            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
                                 Ready to start a project?
                             </h3>
 
@@ -96,17 +158,17 @@ export default function ContactSection() {
                                         rel="noopener noreferrer"
                                         className="group flex items-center justify-between border-b border-fuchsia-500/20 py-6 transition-all duration-300 hover:border-fuchsia-500"
                                     >
-                                        <div className="flex items-center gap-5">
+                                        <div className="flex items-center gap-3 lg:gap-5">
                                             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-fuchsia-500/10 text-fuchsia-500">
                                                 <Icon />
                                             </div>
 
                                             <div>
-                                                <h4 className="text-xl font-semibold text-gray-900 transition-colors group-hover:text-fuchsia-500 dark:text-white">
+                                                <h4 className="text-lg lg:text-xl font-semibold text-gray-900 transition-colors group-hover:text-fuchsia-500 dark:text-white">
                                                     {item.title}
                                                 </h4>
 
-                                                <p className="text-gray-500">
+                                                <p className="text-sm lg:text-base text-gray-500">
                                                     {item.value}
                                                 </p>
                                             </div>
@@ -127,7 +189,9 @@ export default function ContactSection() {
 
                     <div data-aos="fade-left" data-aos-delay="200"
                         className="rounded-3xl border border-fuchsia-500/20 bg-white/70 p-8 shadow-[0_0_50px_rgba(217,70,239,.08)] backdrop-blur-sm dark:bg-gray-950/80">
-                        <form className="space-y-5">
+                        <form
+                            onSubmit={handleSubmit}
+                            className="space-y-5">
                             <div>
                                 <label className="mb-2 block text-sm font-medium text-gray-800 dark:text-gray-200">
                                     Name
@@ -135,7 +199,11 @@ export default function ContactSection() {
 
                                 <input
                                     type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     placeholder="Your Name"
+                                    required
                                     className="w-full rounded-xl border border-gray-200 bg-transparent px-4 py-4 outline-none transition-all duration-300 focus:border-fuchsia-500 dark:border-gray-800"
                                 />
                             </div>
@@ -147,7 +215,11 @@ export default function ContactSection() {
 
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     placeholder="abc@example.com"
+                                    required
                                     className="w-full rounded-xl border border-gray-200 bg-transparent px-4 py-4 outline-none transition-all duration-300 focus:border-fuchsia-500 dark:border-gray-800"
                                 />
                             </div>
@@ -171,19 +243,26 @@ export default function ContactSection() {
 
                                 <textarea
                                     rows={6}
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     placeholder="Tell me about your project..."
+                                    required
                                     className="w-full resize-none rounded-xl border border-gray-200 bg-transparent px-4 py-4 outline-none transition-all duration-300 focus:border-fuchsia-500 dark:border-gray-800"
                                 />
                             </div>
 
-                            <button
-                                type="submit"
-                                className="group flex w-full items-center justify-center gap-3 rounded-xl bg-fuchsia-600 px-6 py-4 font-semibold text-white transition-all duration-300 hover:bg-fuchsia-700"
-                            >
-                                Send Message
+                            <div className="flex justify-end pt-2">
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="group flex items-center justify-center gap-3 rounded-xl bg-fuchsia-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-fuchsia-700 disabled:opacity-50"
+                                >
+                                    {loading ? "Sending..." : "Send Message"}
 
-                                <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                            </button>
+                                    <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>

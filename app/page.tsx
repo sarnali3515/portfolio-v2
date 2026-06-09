@@ -15,7 +15,9 @@ export default function Home() {
       <ExperienceSection />
       <Education />
       <ContactSection />
-      <FollowPointer />
+      <div className="hidden md:block">
+        <FollowPointer />
+      </div>
 
 
     </section>

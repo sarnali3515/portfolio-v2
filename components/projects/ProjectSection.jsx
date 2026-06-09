@@ -433,14 +433,14 @@ export default function ProjectsCarousel() {
                             ✕
                         </button>
 
-                        <div className="relative w-full h-72 md:h-96 lg:h-[430px]">
+                        {/* <div className="relative w-full h-72 md:h-96 lg:h-[430px]">
                             <img
                                 src={modalProject.image}
                                 alt={modalProject.title}
                                 className="w-full h-full object-cover"
                             />
 
-                        </div>
+                        </div> */}
 
                         <div className="p-6 md:p-8">
                             <h3 className="text-3xl md:text-4xl font-bold text-fuchsia-600 dark:text-fuchsia-500 mb-3">
