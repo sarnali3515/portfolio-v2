@@ -47,8 +47,9 @@ export default function ExperienceSection() {
 
             <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-6">
                 <SectionTitle
+                    text="Career Journey"
                     title="Experience"
-                    description="Building scalable and modern frontend applications."
+                    description="A timeline of my professional growth."
                 />
 
                 <div className="relative mt-16">

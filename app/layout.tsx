@@ -9,6 +9,8 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
+import AOSInitializer from "@/components/AOSInitializer";
+import "aos/dist/aos.css";
 
 export const metadata: Metadata = {
   title: {
@@ -43,6 +45,8 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+
+          <AOSInitializer />
           <div className="">
             <Navbar />
             <main className="">

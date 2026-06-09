@@ -19,7 +19,11 @@ const Skills = () => {
 
     return (
         <div id="skills" className='py-20 bg-gradient-to-b from-white to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-900'>
-            <SectionTitle title="Skills" description="Skill section demo" />
+            <SectionTitle
+                text="My Expertise"
+                title="Skills"
+                description="Experienced with modern frontend and backend technologies."
+            />
 
             {/* 3D Carousel */}
             <div className="">

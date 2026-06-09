@@ -40,7 +40,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
 
                     {/* LEFT */}
-                    <div>
+                    <div data-aos="fade-up" data-aos-delay="200">
                         <Image
                             src="/logo-full.png"
                             alt="Sarnali Logo"
@@ -48,12 +48,14 @@ export default function Footer() {
                             height={60}
                             className="h-auto w-[180px]"
                         />
-                        <div className="mt-3 flex items-center gap-2 text-sm lg:text-base text-gray-900 dark:text-gray-300">
+                        <div data-aos="fade-up" data-aos-delay="300"
+                            className="mt-3 flex items-center gap-2 text-sm lg:text-base text-gray-900 dark:text-gray-300">
                             <FaMapMarkerAlt className="text-fuchsia-500" />
                             <span>Chittagong, Bangladesh</span>
                         </div>
-                        <p className="mt-3 max-w-md text-sm text-gray-800 dark:text-gray-400">
-                            Crafting modern, fast and scalable web experiences with React & Next.js
+                        <p data-aos="fade-up" data-aos-delay="400"
+                            className="mt-3 max-w-md text-sm text-gray-800 dark:text-gray-400">
+                            Passionate about creating seamless digital experiences through clean code and thoughtful design.
                         </p>
                     </div>
 
@@ -61,7 +63,8 @@ export default function Footer() {
                     <div className="flex flex-col items-center gap-6 md:items-end">
 
                         {/* MENU */}
-                        <div className="flex flex-wrap justify-center gap-6 text-sm lg:text-base md:justify-end">
+                        <div data-aos="fade-up" data-aos-delay="200"
+                            className="flex flex-wrap justify-center gap-6 text-sm lg:text-base md:justify-end">
                             {links.map((link, i) => (
                                 <a
                                     key={i}
@@ -74,7 +77,8 @@ export default function Footer() {
                         </div>
 
                         {/* SOCIALS */}
-                        <div className="flex gap-4">
+                        <div data-aos="fade-up" data-aos-delay="300"
+                            className="flex gap-4">
                             {socials.map((item, i) => {
                                 const Icon = item.icon;
 
@@ -98,7 +102,8 @@ export default function Footer() {
                 <div className="my-10 h-px w-full bg-gradient-to-r from-transparent via-fuchsia-500/20 to-transparent" />
 
                 {/* COPYRIGHT */}
-                <p className="text-center text-xs lg:text-sm text-gray-500">
+                <p data-aos="fade-up" data-aos-delay="300"
+                    className="text-center text-xs lg:text-sm text-gray-500">
                     © {year} Sarnali. All rights reserved.
                 </p>
             </div>

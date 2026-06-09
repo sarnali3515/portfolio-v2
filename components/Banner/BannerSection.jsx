@@ -3,9 +3,10 @@
 import {
     FaFacebookF,
     FaLinkedinIn,
-    FaTwitter,
+    FaWhatsapp,
     FaGithub,
 } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function HeroSection() {
     return (
@@ -16,10 +17,11 @@ export default function HeroSection() {
             <div className="absolute bottom-10 right-10 w-80 h-80 bg-fuchsia-400/10 dark:bg-fuchsia-500/10 blur-[140px] rounded-full" />
 
             {/* Left Social Bar */}
-            <div className="hidden lg:flex absolute left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-6 z-20">
+            <div data-aos="fade-up" data-aos-delay="400"
+                className="hidden lg:flex absolute left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-6 z-20">
 
                 <p className="rotate-[-90deg] text-gray-600 dark:text-white/70 text-sm tracking-[0.35em] uppercase whitespace-nowrap transition-colors duration-500">
-                    Follow Me
+                    Connect
                 </p>
 
                 <div className="w-[1px] h-16 bg-gray-300 dark:bg-white/20 mt-10 transition-colors duration-500" />
@@ -46,6 +48,13 @@ export default function HeroSection() {
                     </a>
 
                     <a
+                        href="mailto:kjsarnali@gmail.com"
+                        className="hover:text-fuchsia-500 transition duration-300"
+                    >
+                        <MdEmail size={17} />
+                    </a>
+
+                    <a
                         href="https://www.facebook.com/khatunajannatsarnali"
                         target="_blank"
                         className="hover:text-fuchsia-500 transition duration-300"
@@ -54,29 +63,37 @@ export default function HeroSection() {
                     </a>
 
                     <a
-                        href="#"
+                        href="https://wa.me/8801876621880"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="hover:text-fuchsia-500 transition duration-300"
                     >
-                        <FaTwitter size={15} />
+                        <FaWhatsapp size={15} />
                     </a>
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 lg:px-24 2xl:px-16 py-20 grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-1 items-center">
+            <div className="container mx-auto px-6 lg:px-24 2xl:px-16 py-20 grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-1 items-center overflow-hidden">
 
                 {/* Left Content */}
-                <div className="relative z-10">
+                <div
+                    data-aos="fade-left"
+                    data-aos-delay="300"
+                    className="relative z-10">
 
-                    <p className="mb-3 text-gray-700 dark:text-white/90 lg:text-xl transition-colors duration-500">
+                    <p
+                        data-aos="fade-up" data-aos-delay="200"
+                        className="mb-3 text-gray-700 dark:text-white/90 lg:text-xl transition-colors duration-500">
                         Hello! I am
                     </p>
 
-                    <h1 className="text-2xl md:text-5xl 2xl:text-6xl font-extrabold leading-tight whitespace-nowrap text-gray-900 dark:text-white transition-colors duration-500">
+                    <h1 data-aos="fade-up" data-aos-delay="300"
+                        className="text-2xl md:text-5xl 2xl:text-6xl font-extrabold leading-tight whitespace-nowrap text-gray-900 dark:text-white transition-colors duration-500">
                         Khatuna Jannat Sarnali
                     </h1>
 
-                    <h2 className="mt-4 text-xl md:text-4xl 2xl:text-5xl font-bold">
+                    <h2 data-aos="fade-up" data-aos-delay="400"
+                        className="mt-4 text-xl md:text-4xl 2xl:text-5xl font-bold">
                         <span className="text-gray-900 dark:text-white transition-colors duration-500">
                             Web{" "}
                         </span>
@@ -86,22 +103,31 @@ export default function HeroSection() {
                         </span>
                     </h2>
 
-                    <p className="mt-6 max-w-xl text-gray-600 dark:text-white/60 leading-relaxed lg:text-lg transition-colors duration-500">
-                        I’m product designer that focuses on solving your problem
-                        by making a product that will exceed your expectations so far.
+                    <p data-aos="fade-up" data-aos-delay="500"
+                        className="mt-6 max-w-xl text-gray-600 dark:text-white/60 leading-relaxed lg:text-lg transition-colors duration-500">
+                        Frontend Developer experienced in building modern web and mobile
+                        applications using Next.js, React, and React Native. Passionate about
+                        writing clean, maintainable code and creating scalable, user-friendly
+                        solutions.
                     </p>
 
-                    <button className="group mt-10 inline-flex items-center gap-3 bg-fuchsia-600 hover:bg-fuchsia-500 transition-all duration-300 px-7 py-4 rounded-full text-white font-semibold shadow-[0_0_30px_rgba(217,70,239,0.35)]">
+                    <a
+                        href="/sarna-resume.pdf"
+                        download
+                        data-aos="fade-up" data-aos-delay="600"
+                        className="group mt-10 inline-flex items-center gap-3 bg-fuchsia-600 hover:bg-fuchsia-500 transition-all duration-300 px-7 py-4 rounded-full text-white font-semibold shadow-[0_0_30px_rgba(217,70,239,0.35)]"
+                    >
                         Download Resume
 
                         <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition">
                             →
                         </span>
-                    </button>
+                    </a>
                 </div>
 
                 {/* Right Image */}
-                <div className="relative flex justify-center lg:justify-end">
+                <div data-aos="zoom-in" data-aos-delay="200"
+                    className="relative flex justify-center lg:justify-end">
 
                     {/* Neon Border */}
                     <div className="relative w-[340px] md:w-[380px] h-[260px] md:h-[320px] rounded-[35px] p-1 bg-gradient-to-br from-fuchsia-500 to-blue-600 shadow-[0_0_70px_rgba(217,70,239,0.35)]">

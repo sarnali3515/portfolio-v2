@@ -256,10 +256,14 @@ export default function ProjectsCarousel() {
     };
 
     return (
-        <section id="projects" className="w-full min-h-screen bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:via-gray-900 dark:to-black flex flex-col items-center justify-center overflow-x-hidden relative py-8 md:py-12 transition-colors duration-300">
+        <section id="projects" className="w-full min-h-screen bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:via-gray-900 dark:to-black flex flex-col items-center justify-center overflow-x-hidden relative py-8 md:py-32 transition-colors duration-300">
             {/* Header Section */}
 
-            <SectionTitle title="My Projects" description="Explore my latest work and creative projects" />
+            <SectionTitle
+                text="What I've Built"
+                title="My Projects"
+                description="A collection of projects highlighting my skills."
+            />
 
             {/* 3D Carousel Section */}
             <div className="w-full h-[600px] md:h-[650px] lg:h-[750px] overflow-hidden flex items-center justify-center select-none">
