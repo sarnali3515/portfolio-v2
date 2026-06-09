@@ -5,16 +5,16 @@ import SkillCarousel from "./SkillCarousel";
 const Skills = () => {
     // Prepare items array with skill data using public folder paths
     const skillItems = [
-        { name: "Next js", icon: "/images/Icons/next-js.png" },
-        { name: "React js", icon: "/images/Icons/react-icon.png" },
-        { name: "Node Js", icon: "/images/Icons/node-js.png" },
-        { name: "Express js", icon: "/images/Icons/express-js.png" },
-        { name: "Mongodb", icon: "/images/Icons/mongodb.png" },
-        { name: "Firebase", icon: "/images/Icons/firebase.png" },
-        { name: "Tailwind", icon: "/images/Icons/tailwind.png" },
-        { name: "Javascript", icon: "/images/Icons/javascript.png" },
-        { name: "CSS3", icon: "/images/Icons/css3.png" },
-        { name: "HTML5", icon: "/images/Icons/html-5.png" }
+        { name: "Next js", icon: "/images/icon/next-js.png" },
+        { name: "React js", icon: "/images/icon/react-icon.png" },
+        { name: "Node Js", icon: "/images/icon/node-js.png" },
+        { name: "Express js", icon: "/images/icon/express-js.png" },
+        { name: "Mongodb", icon: "/images/icon/mongodb.png" },
+        { name: "Firebase", icon: "/images/icon/firebase.png" },
+        { name: "Tailwind", icon: "/images/icon/tailwind.png" },
+        { name: "Javascript", icon: "/images/icon/javascript.png" },
+        { name: "CSS3", icon: "/images/icon/css3.png" },
+        { name: "HTML5", icon: "/images/icon/html-5.png" }
     ];
 
     return (
