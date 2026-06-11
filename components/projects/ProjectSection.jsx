@@ -474,12 +474,12 @@ export default function ProjectsCarousel() {
                                 </ul>
                             </div>
 
-                            <div className="flex flex-wrap gap-4">
+                            <div className="gap-4 grid grid-cols-2 md:grid-cols-3">
                                 <a
                                     href={modalProject.liveLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex-1 bg-fuchsia-600 hover:bg-fuchsia-700 text-white py-3 rounded-lg flex items-center justify-center gap-2 transition-colors text-base font-medium"
+                                    className="col-span-2 md:col-span-1 bg-fuchsia-600 hover:bg-fuchsia-700 text-white py-3 rounded-lg flex items-center justify-center gap-2 transition-colors text-base font-medium"
                                 >
                                     <FaEye size={18} /> Live Demo
                                 </a>
@@ -487,7 +487,7 @@ export default function ProjectsCarousel() {
                                     href={modalProject.clientGithub}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex-1 bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white py-3 rounded-lg flex items-center justify-center gap-2 transition-colors text-base font-medium"
+                                    className="bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white py-3 rounded-lg flex items-center justify-center gap-2 transition-colors text-base font-medium"
                                 >
                                     <FaGithub size={18} /> Client Code
                                 </a>
@@ -496,7 +496,7 @@ export default function ProjectsCarousel() {
                                         href={modalProject.serverGithub}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white py-3 rounded-lg flex items-center justify-center gap-2 transition-colors text-base font-medium"
+                                        className="bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white py-3 rounded-lg flex items-center justify-center gap-2 transition-colors text-base font-medium"
                                     >
                                         <FaGithub size={18} /> Server Code
                                     </a>
