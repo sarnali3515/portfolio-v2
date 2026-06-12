@@ -151,6 +151,55 @@ export default function HeroSection() {
                         solutions.
                     </p>
 
+                    {/* mobile icon */}
+                    <div
+                        data-aos="fade-up" data-aos-delay="600"
+                        className="flex lg:hidden items-center gap-4 mt-6 text-gray-600 dark:text-white/70">
+
+                        <a
+                            href="https://www.linkedin.com/in/khatuna-jannat-sarnali/"
+                            target="_blank"
+                            className="hover:text-fuchsia-500 transition duration-300"
+                        >
+                            <FaLinkedinIn size={15} />
+                        </a>
+
+
+
+                        <a
+                            href="https://github.com/sarnali3515"
+                            target="_blank"
+                            className="hover:text-fuchsia-500 transition duration-300"
+                        >
+                            <FaGithub size={15} />
+                        </a>
+
+                        <a
+                            href="mailto:kjsarnali@gmail.com"
+                            className="hover:text-fuchsia-500 transition duration-300"
+                        >
+                            <MdEmail size={17} />
+                        </a>
+
+                        <a
+                            href="https://www.facebook.com/khatunajannatsarnali"
+                            target="_blank"
+                            className="hover:text-fuchsia-500 transition duration-300"
+                        >
+                            <FaFacebookF size={15} />
+                        </a>
+
+                        <a
+                            href="https://wa.me/8801876621880"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-fuchsia-500 transition duration-300"
+                        >
+                            <FaWhatsapp size={15} />
+                        </a>
+
+                    </div>
+
                     <div
                         data-aos="fade-up"
                         data-aos-delay="600"
@@ -160,20 +209,19 @@ export default function HeroSection() {
                         <a
                             href="#projects"
                             className="
-    inline-flex items-center gap-2
+    inline-flex items-center justify-center
     border-2 border-fuchsia-500
     text-fuchsia-600 dark:text-fuchsia-400
     hover:bg-fuchsia-500 hover:text-white
-    dark:hover:text-white
     transition-all duration-300
-    px-5 py-3
+    px-4 py-2.5
     md:px-7 md:py-4
     rounded-full
-    text-sm md:text-base
+    text-xs md:text-base
     font-semibold
   "
                         >
-                            View Projects →
+                            View Projects
                         </a>
 
                         {/* Resume */}
@@ -182,22 +230,21 @@ export default function HeroSection() {
                             download
                             className="
     group
-    inline-flex items-center gap-2
+    inline-flex items-center justify-center gap-2
     bg-fuchsia-600 hover:bg-fuchsia-500
     transition-all duration-300
-    px-5 py-3
+    px-4 py-2.5
     md:px-7 md:py-4
     rounded-full
-    text-sm md:text-base
+    text-xs md:text-base
     text-white font-semibold
-    shadow-[0_0_30px_rgba(217,70,239,0.35)]
+   
   "
                         >
                             Download Resume
-
                             <span
                                 className="
-      w-6 h-6 md:w-7 md:h-7
+      w-5 h-5 md:w-7 md:h-7
       rounded-full
       bg-white/20
       flex items-center justify-center
