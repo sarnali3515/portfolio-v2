@@ -50,7 +50,7 @@ export default function RootLayout({
           <AOSInitializer />
           <div className="">
             <Navbar />
-            <main className="">
+            <main className="overflow-hidden">
               <SmoothScroll>
                 {children}
               </SmoothScroll>

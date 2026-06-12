@@ -238,7 +238,6 @@ export default function HeroSection() {
     rounded-full
     text-xs md:text-base
     text-white font-semibold
-   
   "
                         >
                             Download Resume
