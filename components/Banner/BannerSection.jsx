@@ -1,5 +1,6 @@
-// app/components/HeroSection.jsx
+"use client"
 
+import { useEffect, useState } from "react";
 import {
     FaFacebookF,
     FaLinkedinIn,
@@ -7,8 +8,26 @@ import {
     FaGithub,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { AnimatePresence, motion } from "framer-motion";
+
+const texts = [
+    "Frontend Developer",
+    "Next.js & React Developer",
+    "React Native Developer",
+    "Mern Stack Developer",
+];
 
 export default function HeroSection() {
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % texts.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="relative overflow-hidden min-h-screen flex items-center py-10 bg-white dark:bg-[#070012] transition-colors duration-500">
 
@@ -92,16 +111,37 @@ export default function HeroSection() {
                         Khatuna Jannat Sarnali
                     </h1>
 
-                    <h2 data-aos="fade-up" data-aos-delay="400"
+                    <div data-aos="fade-up"
+                        data-aos-delay="400"
                         className="mt-4 text-xl md:text-4xl 2xl:text-5xl font-bold">
-                        <span className="text-gray-900 dark:text-white transition-colors duration-500">
-                            Web{" "}
-                        </span>
-
-                        <span className="text-fuchsia-500">
-                            Developer
-                        </span>
-                    </h2>
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 25 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -25 }}
+                                transition={{
+                                    duration: 0.5,
+                                    ease: "easeInOut",
+                                }}
+                                className="text-fuchsia-500 font-bold text-xl md:text-4xl 2xl:text-5xl"
+                            >
+                                {texts[index].split("").map((char, i) => (
+                                    <motion.span
+                                        key={i}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{
+                                            delay: i * 0.03,
+                                            duration: 0.3,
+                                        }}
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))}
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
 
                     <p data-aos="fade-up" data-aos-delay="500"
                         className="mt-6 max-w-xl text-gray-600 dark:text-white/60 leading-relaxed lg:text-lg transition-colors duration-500">
@@ -111,18 +151,63 @@ export default function HeroSection() {
                         solutions.
                     </p>
 
-                    <a
-                        href="/sarna-resume.pdf"
-                        download
-                        data-aos="fade-up" data-aos-delay="600"
-                        className="group mt-10 inline-flex items-center gap-3 bg-fuchsia-600 hover:bg-fuchsia-500 transition-all duration-300 px-7 py-4 rounded-full text-white font-semibold shadow-[0_0_30px_rgba(217,70,239,0.35)]"
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="600"
+                        className="mt-10 flex flex-wrap gap-4"
                     >
-                        Download Resume
+                        {/* View Projects */}
+                        <a
+                            href="#projects"
+                            className="
+    inline-flex items-center gap-2
+    border-2 border-fuchsia-500
+    text-fuchsia-600 dark:text-fuchsia-400
+    hover:bg-fuchsia-500 hover:text-white
+    dark:hover:text-white
+    transition-all duration-300
+    px-5 py-3
+    md:px-7 md:py-4
+    rounded-full
+    text-sm md:text-base
+    font-semibold
+  "
+                        >
+                            View Projects →
+                        </a>
 
-                        <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition">
-                            →
-                        </span>
-                    </a>
+                        {/* Resume */}
+                        <a
+                            href="/sarna-resume.pdf"
+                            download
+                            className="
+    group
+    inline-flex items-center gap-2
+    bg-fuchsia-600 hover:bg-fuchsia-500
+    transition-all duration-300
+    px-5 py-3
+    md:px-7 md:py-4
+    rounded-full
+    text-sm md:text-base
+    text-white font-semibold
+    shadow-[0_0_30px_rgba(217,70,239,0.35)]
+  "
+                        >
+                            Download Resume
+
+                            <span
+                                className="
+      w-6 h-6 md:w-7 md:h-7
+      rounded-full
+      bg-white/20
+      flex items-center justify-center
+      group-hover:translate-x-1 transition
+    "
+                            >
+                                →
+                            </span>
+                        </a>
+                    </div>
                 </div>
 
                 {/* Right Image */}
