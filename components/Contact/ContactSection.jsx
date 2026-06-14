@@ -256,7 +256,7 @@ export default function ContactSection() {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="group flex items-center justify-center gap-3 rounded-xl bg-fuchsia-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-fuchsia-700 disabled:opacity-50"
+                                    className="group flex items-center justify-center gap-3 rounded-xl bg-fuchsia-600 px-5 lg:px-8 py-3 lg:py-4 font-semibold text-white transition-all duration-300 hover:bg-fuchsia-700 disabled:opacity-50"
                                 >
                                     {loading ? "Sending..." : "Send Message"}
 

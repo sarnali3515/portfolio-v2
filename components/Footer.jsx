@@ -46,7 +46,7 @@ export default function Footer() {
                             alt="Sarnali Logo"
                             width={180}
                             height={60}
-                            className="h-auto w-[180px]"
+                            className="h-auto w-[140px] lg:w-[180px]"
                         />
                         <div data-aos="fade-up" data-aos-delay="300"
                             className="mt-3 flex items-center gap-2 text-sm lg:text-base text-gray-900 dark:text-gray-300">
